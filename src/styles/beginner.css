@@ -1,0 +1,391 @@
+/* ============================================================
+   ThreatTrace - BEGINNER EDITION stylesheet
+   Plain, simple, readable CSS - no fancy effects.
+   Designed to look like a student-built learning project.
+   ============================================================ */
+
+:root {
+  --bg: #0B1220;
+  --card: #162033;
+  --border: #25324A;
+  --text: #E6EDF7;
+  --muted: #AAB7C7;
+  --danger: #FF4D4D;
+  --warn: #FFB020;
+  --safe: #00D084;
+  --blue: #2E90FA;
+}
+
+.bk-main {
+  padding: 22px 24px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* -------- Banner -------- */
+.bk-banner {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.bk-banner h1 { margin: 0 0 8px; font-size: 26px; }
+.bk-banner p { margin: 4px 0; color: var(--muted); font-size: 14px; }
+
+/* -------- IST clock -------- */
+.bk-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #0E1B2E;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin-top: 14px;
+  font-family: 'Courier New', monospace;
+}
+.bk-clock-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #14325C;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: inherit;
+  letter-spacing: .4px;
+}
+.bk-clock-time {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--text);
+}
+.bk-clock-seconds {
+  color: var(--warn);
+  font-size: 14px;
+  font-weight: 700;
+}
+.bk-clock-date {
+  color: var(--muted);
+  font-size: 13px;
+  font-family: inherit;
+  border-left: 1px solid var(--border);
+  padding-left: 14px;
+}
+
+/* -------- Stats -------- */
+.bk-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.bk-stat {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+.bk-stat b { display: block; font-size: 26px; color: var(--danger); }
+.bk-stat span { font-size: 12px; color: var(--muted); }
+
+/* -------- Card / Panel -------- */
+.bk-card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+.bk-h {
+  margin: 0 0 6px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bk-tag {
+  background: #1c2a44;
+  color: var(--blue);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.bk-explain {
+  background: #0E1B2E;
+  border-left: 4px solid var(--blue);
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--text);
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+/* -------- Mini grid -------- */
+.bk-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+.bk-mini {
+  background: #0E1B2E;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+.bk-mini b { color: var(--text); display: block; margin-bottom: 4px; font-size: 14px; }
+.bk-mini span { color: var(--muted); font-size: 12px; }
+
+/* -------- Two-column layout -------- */
+.bk-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 800px) { .bk-grid-2 { grid-template-columns: 1fr; } }
+.bk-h4 { margin: 16px 0 8px; font-size: 13px; color: var(--muted); font-weight: 700; }
+
+/* -------- Inputs / buttons -------- */
+.bk-input {
+  background: #0B1220;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+}
+.bk-input:focus { outline: 2px solid var(--blue); }
+
+.bk-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+
+.bk-btn {
+  background: #0B1220;
+  border: 2px solid var(--border);
+  color: var(--text);
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bk-btn:hover { background: #1c2740; }
+.bk-btn:disabled { opacity: .4; cursor: not-allowed; }
+.bk-btn.blue { background: #14325C; border-color: #2E90FA; color: var(--blue); }
+.bk-btn.blue:hover { background: #1d4786; }
+.bk-btn.green { background: #0E2F26; border-color: #00D084; color: var(--safe); }
+.bk-btn.danger { background: #3D1414; border-color: #FF4D4D; color: var(--danger); }
+
+/* -------- Table -------- */
+.bk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.bk-table th {
+  text-align: left;
+  padding: 8px 10px;
+  color: var(--muted);
+  background: #0E1B2E;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.bk-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.bk-table tr:last-child td { border-bottom: none; }
+
+/* -------- Badge -------- */
+.bk-bad {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.bk-bad.red { background: #3D1414; color: var(--danger); }
+.bk-bad.orange { background: #3D2D0A; color: var(--warn); }
+.bk-bad.blue { background: #14325C; color: var(--blue); }
+.bk-bad.green { background: #0E2F26; color: var(--safe); }
+
+/* -------- Empty state -------- */
+.bk-empty {
+  padding: 16px;
+  background: #0E1B2E;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* -------- Permission row -------- */
+.bk-perm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  background: #0E1B2E;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+/* -------- Stack -------- */
+.bk-stack-item {
+  background: #0E1B2E;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--warn);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+.bk-stack-item.top { border-left-color: var(--danger); }
+
+/* -------- Queue rail -------- */
+.bk-queue-rail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  background: #0E1B2E;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.bk-queue-label { font-size: 11px; font-weight: 700; color: var(--muted); }
+.bk-queue-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* -------- Result -------- */
+.bk-result {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #3D2D0A;
+  border: 2px solid var(--warn);
+  border-radius: 8px;
+  color: var(--warn);
+  font-weight: 700;
+}
+
+/* -------- Path -------- */
+.bk-path {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 12px;
+}
+.bk-path-node {
+  background: var(--warn);
+  color: #1A1306;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.bk-path-arrow { margin-left: 16px; color: var(--muted); font-size: 18px; }
+
+/* -------- Console -------- */
+.bk-console {
+  background: #060B16;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  min-height: 120px;
+  line-height: 1.7;
+  color: var(--safe);
+}
+
+/* -------- Timeline -------- */
+.bk-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+.bk-timeline li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.bk-timeline li:last-child { border-bottom: none; }
+.bk-tl-dot {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--card);
+  border: 2px solid var(--danger);
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  color: var(--danger);
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.bk-mono { font-family: 'Courier New', monospace; }
+
+/* -------- Modal -------- */
+.bk-modal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.7);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+}
+.bk-modal-box {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 22px;
+  max-width: 460px;
+}
+.bk-modal-box h3 { margin-top: 0; }
+
+/* -------- Gauge -------- */
+.bk-gauge-wrap {
+  position: relative;
+  width: 180px;
+  margin: 0 auto;
+}
+.bk-gauge-num {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------- Footer -------- */
+.bk-footer {
+  text-align: center;
+  padding: 22px;
+  border-top: 2px solid var(--border);
+  margin-top: 30px;
+  color: var(--muted);
+}
+.bk-author { color: var(--blue); font-weight: 700; margin-top: 6px; }
+.bk-tz-note { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
