@@ -25,7 +25,7 @@
 <img width="1470" height="836" alt="image" src="https://github.com/user-attachments/assets/a05f3032-2573-42d4-b73d-b9b3f951870a" />
 
 7 Deployment Link
-https://react-main-project-chi.vercel.app/
+https://react-major-project-pi.vercel.app/
 
 8 Steps To Run in your system
 - Download the zip folder 
