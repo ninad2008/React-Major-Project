@@ -14,11 +14,38 @@
 - Optional: GitHub / Vercel for deployment
 
 5 Main features
-- Access change undo (stack / LIFO) UI with history and undo operation (see src/components/AccessChangeUndo.tsx).
-- Firewall shared state via React Context (src/context).
-- Virus/pattern lists and simulated attack data (src/data).
-- Demo pages: full dashboard and beginner-friendly single-page edition (src/pages).
-- Illustrates algorithms & DS: stack, queue, BFS on attack graph, priority queue for patching.
+- VirusPatternList.jsx :- 
+What it does: Searchable list of viruses.
+How: Reads viruses.js array. Applies .filter() for search + severity filter. Modal for details. On detect, calls onDetect(v) which bumps stats in the parent.
+
+- AccessChangeUndo.jsx :-
+What it does: Tracks permission changes with undo.
+How: pushChange() adds to a history array (Stack). popChange() removes the last element (slice(0, -1)). Visually marks the top of the stack with ▼ TOP ▼
+
+- AlertProcessingLine.jsx :- 
+What it does: Queue of alerts, processed in order.
+How: FRONT → REAR rail uses alertQueue.map(). + Add Alert uses array spread ([...q, a]). Process Next uses array destructuring (const [first, ...rest] = queue).
+
+- BannedServerChecker.jsx :-
+What it does: Checks if an IP is on the banned list.
+How: Hash table lookup blocked[ip] — O(1) regardless of list size. Quick-test buttons are pre-set.
+
+- CompromiseRiskSorter.jsx :- 
+What it does: Ranks files by risk.
+How: .sort() with three modes (risk-desc, risk-asc, name). Returns a sorted copy; original stays intact.
+
+- FirewallSettingHub.jsx :-
+What it does: Central firewall rules.
+How: Reads from useFirewall() context. Add/Remove/Toggle all call context methods that update the shared state.
+
+- QuickAttackPathFinder.jsx :-
+What it does: Finds shortest path through a network.
+How: Breadth-First Search (BFS)
+
+- QuickFixDeployer.jsx :-
+What it does: Patches high-risk systems first.
+How: Pre-sorts by risk descending. Uses useRef to store timer IDs (so we can clear them on unmount or reset). setInterval cycles through each system, simulating patch deployment with timeout delays.
+
 
 6 Screenshots
 <img width="1470" height="836" alt="image" src="https://github.com/user-attachments/assets/493a89b1-200c-449a-9c2b-29f67873aaca" />
