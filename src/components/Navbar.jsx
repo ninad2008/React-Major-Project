@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const [time, setTime] = useState(() =>
-    new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })
-  );
 
   React.useEffect(() => {
     const id = setInterval(
