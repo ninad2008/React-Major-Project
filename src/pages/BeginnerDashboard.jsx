@@ -7,33 +7,6 @@ import systemFiles from "../data/systems";
 import { attackGraph } from "../data/attackGraph";
 import { initialTimeline } from "../data/timeline";
 
-const IST_TIMEZONE = "Asia/Kolkata";
-
-const fmtISTTime = (d = new Date()) =>
-  d.toLocaleTimeString("en-IN", {
-    timeZone: IST_TIMEZONE,
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-  });
-
-const fmtISTClock = (d = new Date()) =>
-  d.toLocaleTimeString("en-IN", {
-    timeZone: IST_TIMEZONE,
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: true,
-  });
-
-const fmtISTDate = (d = new Date()) =>
-  d.toLocaleDateString("en-IN", {
-    timeZone: IST_TIMEZONE,
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
-
 const Badge = ({ kind }) => {
   const map = {
     Critical: "bk-bad red", High: "bk-bad orange", Medium: "bk-bad blue", Low: "bk-bad green",
@@ -217,15 +190,6 @@ const BeginnerDashboard = () => {
         <h1>🔐 ThreatTrace - Beginner Edition</h1>
         <p>A simple cybersecurity dashboard built to learn Data Structures &amp; Algorithms (DSA) with React.</p>
         <p style={{ fontSize: 13 }}>Every feature below uses a different DSA concept. Hover or read the blue notes to understand each one.</p>
-
-        <div className="bk-clock">
-          <span className="bk-clock-flag">🇮🇳 IST</span>
-          <div className="bk-clock-time">
-            <span className="bk-clock-digits">{fmtISTClock(istNow)}</span>
-            <span className="bk-clock-seconds">{fmtISTTime(istNow).slice(-3)}</span>
-          </div>
-          <span className="bk-clock-date">{fmtISTDate(istNow)}</span>
-        </div>
       </div>
 
       <div className="bk-stats">
