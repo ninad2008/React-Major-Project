@@ -9,7 +9,6 @@ import CompromiseRiskSorter from "../components/CompromiseRiskSorter";
 import QuickAttackPathFinder from "../components/QuickAttackPathFinder";
 import FirewallSettingHub from "../components/FirewallSettingHub";
 import QuickFixDeployer from "../components/QuickFixDeployer";
-import NetworkMap from "../components/NetworkMap";
 import { useFirewall } from "../context/FirewallContext";
 
 const Dashboard = () => {
@@ -47,7 +46,6 @@ const Dashboard = () => {
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: 0 }}>
         <ThreatGauge value={threatLevel} />
       </div>
-      <NetworkMap />
 
       <VirusPatternList onDetect={handleDetect} />
       <HackerTimeline />
