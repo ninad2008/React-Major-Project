@@ -29,7 +29,6 @@ const Navbar = () => {
       </div>
 
       <div className="nav-right">
-        <div className="clock">UTC {time}</div>
         <div className="profile">
           <div className="avatar">ND</div>
           <div className="who">
