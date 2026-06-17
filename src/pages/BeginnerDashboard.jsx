@@ -238,19 +238,6 @@ const BeginnerDashboard = () => {
       </div>
 
       <section className="bk-card">
-        <h3 className="bk-h">What is DSA? <span className="bk-tag">Quick Reference</span></h3>
-        <p className="bk-explain">💡 This dashboard demonstrates different ways of organizing data. Each feature below uses one of these ideas:</p>
-        <div className="bk-grid-3">
-          <div className="bk-mini"><b>📋 Array + Search</b><br /><span>Storing items in a list and looking through them.</span></div>
-          <div className="bk-mini"><b>🥞 Stack (LIFO)</b><br /><span>Last thing added is the first thing removed.</span></div>
-          <div className="bk-mini"><b>🚶 Queue (FIFO)</b><br /><span>First thing added is the first thing removed.</span></div>
-          <div className="bk-mini"><b>🔑 Hash Table</b><br /><span>Instant lookup by key (like a dictionary).</span></div>
-          <div className="bk-mini"><b>🔃 Sorting</b><br /><span>Rearranging items by some value.</span></div>
-          <div className="bk-mini"><b>🕸 Graph + BFS</b><br /><span>Network of connected nodes + shortest path.</span></div>
-        </div>
-      </section>
-
-      <section className="bk-card">
         <h3 className="bk-h">1. Virus Pattern List <span className="bk-tag">DSA: Array + Linear Search</span></h3>
         <p className="bk-explain">💡 We store all viruses in an array (list). When you type in the search box, we check every item one by one to see if it matches - that's linear search.</p>
         <input className="bk-input" placeholder="Search e.g. 'Trojan'" value={virusSearch} onChange={(e) => setVirusSearch(e.target.value)} />
