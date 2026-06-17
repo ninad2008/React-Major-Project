@@ -454,41 +454,6 @@ const BeginnerDashboard = () => {
         </div>
       </section>
 
-      <section className="bk-card">
-        <h3 className="bk-h">9. Hacker Activity Timeline <span className="bk-tag">DSA: Linked List Simulation</span></h3>
-        <p className="bk-explain">💡 Each event has a time and an action. New events are added to the end, like adding a node to a linked list.</p>
-        <button className="bk-btn" onClick={addEvent}>+ Add Simulated Event</button>
-        <ul className="bk-timeline">
-          {events.map((e) => (
-            <li key={e.id}>
-              <span className="bk-tl-dot">{e.malicious ? "✕" : "✓"}</span>
-              <b className="bk-mono">{e.time}</b> — {e.action}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="bk-card">
-        <h3 className="bk-h">10. Threat Level Gauge <span className="bk-tag">Visual</span></h3>
-        <p className="bk-explain">💡 An SVG circle with a visible stroke. We change the stroke color based on the threat value. 0-30 Safe, 31-70 Warning, 71-100 Critical.</p>
-        <div className="bk-gauge-wrap">
-          <svg width="180" height="180" viewBox="0 0 180 180" style={{ transform: "rotate(-90deg)" }}>
-            <circle cx="90" cy="90" r="74" fill="none" stroke="#25324A" strokeWidth="14" />
-            <circle
-              cx="90" cy="90" r="74" fill="none"
-              stroke={threatLevel > 70 ? "#FF4D4D" : threatLevel > 30 ? "#FFB020" : "#00D084"}
-              strokeWidth="14"
-              strokeDasharray={2 * Math.PI * 74}
-              strokeDashoffset={2 * Math.PI * 74 - (threatLevel / 100) * 2 * Math.PI * 74}
-            />
-          </svg>
-          <div className="bk-gauge-num">
-            <div style={{ fontSize: 38, fontWeight: 800, color: threatLevel > 70 ? "#FF4D4D" : threatLevel > 30 ? "#FFB020" : "#00D084" }}>{threatLevel}%</div>
-            <div style={{ fontSize: 12, color: "#AAB7C7" }}>{threatLevel > 70 ? "CRITICAL" : threatLevel > 30 ? "WARNING" : "SAFE"}</div>
-          </div>
-        </div>
-      </section>
-
       <footer className="bk-footer">
         <p style={{ margin: 0, fontSize: 13 }}>ThreatTrace - Beginner Edition</p>
         <p style={{ margin: 0, fontSize: 12, color: "#AAB7C7" }}>Built with React.js + CSS • Data Structures &amp; Algorithms project</p>
