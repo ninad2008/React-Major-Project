@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DashboardCards from "../components/DashboardCards";
-import ThreatGauge from "../components/ThreatGauge";
 import VirusPatternList from "../components/VirusPatternList";
 import HackerTimeline from "../components/HackerTimeline";
 import AlertProcessingLine from "../components/AlertProcessingLine";
