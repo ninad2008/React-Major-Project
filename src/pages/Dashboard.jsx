@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import DashboardCards from "../components/DashboardCards";
 import VirusPatternList from "../components/VirusPatternList";
-import HackerTimeline from "../components/HackerTimeline";
 import AlertProcessingLine from "../components/AlertProcessingLine";
 import BannedServerChecker from "../components/BannedServerChecker";
 import CompromiseRiskSorter from "../components/CompromiseRiskSorter";
@@ -46,7 +45,6 @@ const Dashboard = () => {
       </div>
 
       <VirusPatternList onDetect={handleDetect} />
-      <HackerTimeline />
       <AlertProcessingLine />
       <BannedServerChecker />
       <CompromiseRiskSorter />
