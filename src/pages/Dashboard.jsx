@@ -44,7 +44,6 @@ const Dashboard = () => {
       <DashboardCards stats={displayStats} />
 
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: 0 }}>
-        <ThreatGauge value={threatLevel} />
       </div>
 
       <VirusPatternList onDetect={handleDetect} />
