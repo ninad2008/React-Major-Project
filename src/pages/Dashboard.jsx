@@ -8,6 +8,7 @@ import QuickAttackPathFinder from "../components/QuickAttackPathFinder";
 import FirewallSettingHub from "../components/FirewallSettingHub";
 import QuickFixDeployer from "../components/QuickFixDeployer";
 import { useFirewall } from "../context/FirewallContext";
+import AccessChangeUndo from "../components/AccessChangeUndo";
 
 const Dashboard = () => {
   const { rules } = useFirewall();
@@ -45,6 +46,7 @@ const Dashboard = () => {
       </div>
 
       <VirusPatternList onDetect={handleDetect} />
+      <AccessChangeUndo />
       <AlertProcessingLine />
       <BannedServerChecker />
       <CompromiseRiskSorter />
