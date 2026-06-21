@@ -5,7 +5,7 @@
 * Develop a screen for security experts to find and analyze dangerous activity (like hacking) on a computer system, tracking where attackers might move next.
 
 3 Project description
-- ThreatTrace is an educational React + Vite TypeScript dashboard that demonstrates common data structures and algorithms through cybersecurity-themed UI modules (access-change undo stack, firewall rules, virus lists, attack-path BFS, patch priority queue, timeline, etc). It is intended for learning and demos.
+- ThreatTrace is an educational React + Vite dashboard that demonstrates common data structures and algorithms through cybersecurity-themed UI modules (access-change undo stack, firewall rules, virus lists, attack-path BFS, patch priority queue, timeline, etc). It is intended for learning and demos.
 
 4 Tech stack
 - React (function components, hooks)
